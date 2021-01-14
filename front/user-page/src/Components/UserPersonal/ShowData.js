@@ -18,11 +18,6 @@ function ShowData() {
       console.log(response.data);
       console.log(response.data[0].name)
       setUserData(response.data);
-      setName = response.data[0].name;
-      setLastName = response.data[0].family_name;
-      setBirthday = response.data[0].birthday;
-      setTel = response.data[0].tel;
-      setEmail = response.data[0].email;
 
     });
   }
@@ -53,7 +48,7 @@ function ShowData() {
         <h3>Last Name: {val.family_name}</h3>
         <input type="text" onChange={(event) => {if(event){setLastName = event.target.value}}}></input>
 
-        <h3>Birthday: {val.birthday}</h3>
+        <h3>Birthday: {val.birthday === "0000-00-00" ? "" : val.birthday}</h3>
         <input type="text" onChange={(event) => {if(event){setBirthday = event.target.value}}}></input>
 
         <h3>Tel: {val.tel}</h3>
