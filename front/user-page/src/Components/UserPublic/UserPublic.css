@@ -5,9 +5,16 @@
   text-align: center;
   font-family: arial;
   background-color: rgb(255, 182, 47);
+  transition: 0.35s;
+  border-radius: 5px;
 
 }
 
+.dataContainer:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: rgb(255, 193, 79);
+
+}
 .getContainer {
   display: flex;
   flex-direction: column;
@@ -16,5 +23,12 @@
 
 input {
  width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ box-sizing: border-box;
+ border-radius: 25px;
+}
 
+.card {
+  margin: 5px;
 }

@@ -12,21 +12,21 @@ export function App() {
     <Router>
 
       <div>
-        <h1>HOME PAGE</h1>
+        <h1>Coolmena</h1>
       </div>
 
       <div className="App"> 
         <div className="navContainer">
           <nav className="nav">
               <button className="navBtn">
-                <Link to="/ShowData">Profile</Link>
+                <Link to="/ShowData" style={{ textDecoration: 'none' }}>Profile</Link>
               </button>
               <button className="navBtn">
-                <Link to="/UserPublic">Public users</Link>
+                <Link to="/UserPublic" style={{ textDecoration: 'none' }}>Public users</Link>
               </button>
 
-              <button>
-                <Link to="/">Home</Link>
+              <button className="navBtn">
+                <Link to="/" style={{ textDecoration: 'none' }}>Home</Link>
               </button>
           </nav>
         </div>

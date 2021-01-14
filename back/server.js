@@ -77,7 +77,7 @@ app.get("/getByName/:name", (req, res) => {
 
     const name = req.params.name || "";
 
-    connection.query("SELECT * FROM users WHERE name = ? || family_name = ? || birthday = ? || email = ?", [name],
+    connection.query("SELECT * FROM users WHERE name = ? ", [name],
         (err, result) => {
             if (err) {
                 console.log(err)

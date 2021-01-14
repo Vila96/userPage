@@ -3,8 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: orange;
-};
+  background-image: linear-gradient(rgb(248, 182, 60), rgb(255, 187, 0));};
 
 .navContainer {
   overflow: hidden;
@@ -13,3 +12,23 @@ body {
   bottom: 0;
   width: 100%;
 }
+
+.navBtn {
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #fff8ed;
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+.navBtn:hover {
+  color: #ffffff !important;
+  background: #ffb056;
+  border-color: #2f2f2f !important;
+  transition: all 0.4s ease 0s;
+  }
+
+
+  

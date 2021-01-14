@@ -61,6 +61,7 @@ function ShowData() {
 
   const mapData = userData.map((val, key) => {
     return (
+      <div className="card">
       <div className="dataContainer"> 
         <h3>Name: {val.name === "" ? "N/A" : val.name}</h3>
         <input type="text" onChange={(event) => { if(event){setName = event.target.value}}}></input>
@@ -79,6 +80,7 @@ function ShowData() {
 
         <button onClick={() => {updateDbData(val.id)}}>Update</button>
 
+      </div>
       </div>
 
     )
