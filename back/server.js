@@ -77,7 +77,7 @@ app.get("/getByName/:name", (req, res) => {
 
     const name = req.params.name || "";
 
-    connection.query("SELECT * FROM users WHERE name = ?", [name],
+    connection.query("SELECT * FROM users WHERE name = ? || family_name = ? || birthday = ? || email = ?", [name],
         (err, result) => {
             if (err) {
                 console.log(err)
@@ -93,11 +93,13 @@ app.get("/getByName/:name", (req, res) => {
 
 app.put("/update", (req, res) => {
     const id = req.body.id;
-    const name = req.body.name|| "";
-    const lastname = req.body.lastname|| "";
-    const birthday = req.body.birthday|| "0000-00-00";
-    const email = req.body.email || "";
-    const tel = req.body.tel || "";
+    const name = req.body.name || req.body.nameSave;
+    const lastname = req.body.lastname || req.body.lastnameSave;
+    const birthday = req.body.birthday || "0000-00-00";
+    const email = req.body.email || req.body.emailSave;
+    const tel = req.body.tel || req.body.telSave;
+
+
 
     connection.query("UPDATE users SET name = ?, family_name = ?, birthday = ?, email = ?, tel = ? WHERE id = ?", [name, lastname, birthday, email, tel, id], 
         (err, result) => {

@@ -5,8 +5,8 @@ import "./ShowData.css"
 function UserPublic() {
 
   let [userData, setUserData] = useState([])
-  let [name, setName] = useState("")
 
+  let [name, setName] = useState("")
 
   const getDbData = () => {
     if (name !== "") {
@@ -25,7 +25,7 @@ function UserPublic() {
 
         <h3>Last Name: {val.family_name}</h3>
 
-        <h3>Birthday: {val.birthday === "0000-00-00" ? "" : val.birthday}</h3>
+        <h3>Birthday: {val.birthday === "0000-00-00" ? "0000-00-00" : val.birthday}</h3>
 
         <h3>Tel: {val.tel}</h3>
 
